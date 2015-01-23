@@ -1,9 +1,64 @@
-#above-the-fold {
-    background: url(../img/office-space.jpg) no-repeat center center;
+$labBlue: #3be;
+
+.sections {
     height: 768px;
     position: relative;
 
-    >nav, >p, >a { position: absolute; }
+    a.teaser {
+        position: absolute;
+        display: block;
+        bottom: 15px;
+        right: 15px;
+        padding: 25px;
+        color: #fff;
+
+        >span {
+            display: block;
+
+            &.icon {
+                position: relative;
+                float: left;
+                font-family: 'fontawesome';
+                font-size: 50px;
+                padding-right: 20px;
+                padding-top: 5px;
+                opacity: 0.6;
+            }
+
+            &.text {
+                position: relative;
+                float: left;
+                width: 250px;
+                line-height: 18px;
+                text-shadow: 0 0 1px #333;
+
+                >strong {
+                    display: block;
+                    padding-bottom: 5px;
+                    text-transform: uppercase;
+                    font-weight: 100;
+                    font-size: 125%;
+                }
+            }
+
+            &.background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: #333;
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+#above-the-fold {
+    background: url(../img/office-space.jpg) no-repeat center center;
+    position: relative;
+
+    >nav, >p { position: absolute; }
 
     >p {
         left: 0;
@@ -24,7 +79,7 @@
         line-height: 37px;
         letter-spacing: 1px;
 
-        >strong { color: #3be; }
+        >strong { color: $labBlue; }
 
         >small {
             text-transform: uppercase;
@@ -55,38 +110,103 @@
         }
     }
 
-    >a {
-        display: block;
-        bottom: 15px;
-        right: 15px;
-        padding: 25px;
+    
+}
 
-        >span {
-            display: block;
+#strengths {
+    height: 618px;
+    padding: 75px 0;
 
-            &.icons {
-                position: relative;
-                float: left;
-                font-family: 'fontawesome';
+    >h2 {
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 275%;
+    }
+
+    >ul {
+        width: 1000px;
+        margin: 0 auto;
+
+        >li {
+            float: left;
+            width: 150px;
+            margin: 0 25px;
+
+            >span {
+                display: block;
+                background: $labBlue;
                 color: #fff;
-                width: 100px;
+                font-family: 'fontawesome';
+                font-size: 50px;
+                border-radius: 60px;
+                width: 120px;
+                height: 120px;
+                margin: 0 15px 25px;
+                line-height: 120px;
+                text-align: center;
             }
 
-            &.text {
-                position: relative;
-                float: left;
-                width: 250px;
+            >h3 {
+                text-transform: uppercase;
+                margin-bottom: 25px;
+                text-align: center;
+                font-size: 115%;
             }
 
-            &.background {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: #333;
-                opacity: 0.8;
+            >p { line-height: 22px; }
+        }
+    }
+
+    >a.teaser {
+        >span.background { background: #867454; }
+    }
+}
+
+
+#problems {
+    background: #273337;
+    height: 618px;
+    padding: 75px 0;
+    color: #ddd;
+
+    >h2 {
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 275%;
+        color: #ddd;
+    }
+
+    >ul {
+        width: 1000px;
+        margin: 0 auto;
+
+        >li {
+            float: left;
+            width: 150px;
+            margin: 0 50px;
+
+            >span {
+                display: block;
+                background: #fff;
+                color: #273337;
+                font-family: 'fontawesome';
+                font-size: 50px;
+                border-radius: 60px;
+                width: 120px;
+                height: 120px;
+                margin: 0 15px 25px;
+                line-height: 120px;
+                text-align: center;
             }
+
+            >h3 {
+                text-transform: uppercase;
+                margin-bottom: 25px;
+                text-align: center;
+                font-size: 115%;
+            }
+
+            >p { line-height: 22px; }
         }
     }
 }
