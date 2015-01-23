@@ -2,3 +2,8 @@ dist/js
 dist/img
 dist/css
 dist/index.html
+npm-debug.log
+src/js/templates/jst.js
+node_modules
+.sass-cache
+tmp

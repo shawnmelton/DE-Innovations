@@ -1,0 +1,92 @@
+#above-the-fold {
+    background: url(../img/office-space.jpg) no-repeat center center;
+    height: 768px;
+    position: relative;
+
+    >nav, >p, >a { position: absolute; }
+
+    >p {
+        left: 0;
+        right: 0;
+        height: 200px;
+        background: -moz-linear-gradient(top, rgba(0,0,0,0.75) 0%, transparent 100%, 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.75)), color-stop(100%, transparent));
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0.75) 0%, transparent 100%);
+        background: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, transparent 100%);
+    }
+
+    >h1 {
+        color: #fff;
+        text-shadow: 0 0 20px #000;
+        text-align: center;
+        font-size: 325%;
+        position: relative;
+        line-height: 37px;
+        letter-spacing: 1px;
+
+        >strong { color: #3be; }
+
+        >small {
+            text-transform: uppercase;
+            font-size: 20px;
+            color: #ddd;
+            letter-spacing: 0px;
+        }
+    }
+
+    >nav {
+        top: 10px;
+
+        &.left { left: 25px; }
+        &.right { right: 25px; }
+
+        >a {
+            display: block;
+            cursor: pointer;
+            padding: 0 35px;
+            height: 30px;
+            line-height: 30px;
+            color: #fff;
+            float: left;
+            color: #bbb;
+            text-shadow: 0 0 10px #000;
+
+            &:hover { text-decoration: underline; }
+        }
+    }
+
+    >a {
+        display: block;
+        bottom: 15px;
+        right: 15px;
+        padding: 25px;
+
+        >span {
+            display: block;
+
+            &.icons {
+                position: relative;
+                float: left;
+                font-family: 'fontawesome';
+                color: #fff;
+                width: 100px;
+            }
+
+            &.text {
+                position: relative;
+                float: left;
+                width: 250px;
+            }
+
+            &.background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: #333;
+                opacity: 0.8;
+            }
+        }
+    }
+}
