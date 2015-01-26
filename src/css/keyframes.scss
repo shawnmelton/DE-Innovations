@@ -1,0 +1,105 @@
+$labBlue: #1cf;
+
+@-webkit-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    25% {
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+    }
+
+    75% {
+        -webkit-transform: rotate(-270deg);
+        transform: rotate(-270deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes blueFirst {
+    0% { color: $labBlue; }
+    25% { color: #fff; }
+    75% { color: #fff; }
+    100% { color: $labBlue; }
+}
+
+@-webkit-keyframes blueSecond {
+    0% { color: #fff; }
+    25% { color: $labBlue; }
+    50% { color: #fff; }
+}
+
+@-webkit-keyframes blueThird {
+    25% { color: #fff; }
+    50% { color: $labBlue; }
+    75% { color: #fff; }
+}
+
+@-webkit-keyframes blueFourth {
+    50% { color: #fff; }
+    75% { color: $labBlue; }
+    100% { color: #fff; }
+}
+
+@keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    25% {
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+    }
+
+    75% {
+        -webkit-transform: rotate(-270deg);
+        transform: rotate(-270deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes blueFirst {
+    0% { color: $labBlue; }
+    25% { color: #fff; }
+    75% { color: #fff; }
+    100% { color: $labBlue; }
+}
+
+@keyframes blueSecond {
+    0% { color: #fff; }
+    25% { color: $labBlue; }
+    50% { color: #fff; }
+}
+
+@keyframes blueThird {
+    25% { color: #fff; }
+    50% { color: $labBlue; }
+    75% { color: #fff; }
+}
+
+@keyframes blueFourth {
+    50% { color: #fff; }
+    75% { color: $labBlue; }
+    100% { color: #fff; }
+}

@@ -234,7 +234,7 @@ $labBlue: #3be;
     >div {
         border-width: 10px;
         border-style: solid;
-        border-radius: 250px;
+        border-radius: 275px;
         height: 500px;
         width: 500px;
         position: absolute;
@@ -250,8 +250,8 @@ $labBlue: #3be;
             border-color: transparent;
             border-right-color: $labBlue;
 
-            -webkit-animation: spinner 1s ease-out;
-            animation: spinner 1s ease-out;
+            -webkit-animation: spinner 8s;
+            animation: spinner 8s;
             -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
         }
@@ -259,26 +259,23 @@ $labBlue: #3be;
 
     >p {
         position: absolute;
-        width: 200px;
+        width: 260px;
         height: 50px;
         line-height: 50px;
         text-align: center;
         left: 50%;
         top: 50%;
         color: #fff;
-        font-size: 200%;
-        text-shadow: 0 0 10px #000;
+        font-size: 225%;
+        text-shadow: 0 0 1px #555;
         text-transform: uppercase;
-
-        -webkit-animation-iteration-count: infinite;
-        animation-iteration-count: infinite;
 
         &.second, &.third {
             margin-left: -490px;
         }
 
         &.first, &.fourth {
-            margin-left: 220px;
+            margin-left: 245px;
         }
 
         &.second, &.first {
@@ -290,76 +287,33 @@ $labBlue: #3be;
         }
 
         &.first {
-            -webkit-animation: blueFirst 1s ease-out;
-            animation: spinner 1s ease-out;
+            color: $labBlue;
+
+            -webkit-animation: blueFirst 8s;
+            animation: blueFirst 8s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
         }
 
         &.second {
-            -webkit-animation: blueSecond 1s ease-out;
-            animation: spinner 1s ease-out;
+            -webkit-animation: blueSecond 8s;
+            animation: blueSecond 8s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
         }
 
         &.third {
-            -webkit-animation: blueThird 1s ease-out;
-            animation: spinner 1s ease-out;
+            -webkit-animation: blueThird 8s;
+            animation: blueThird 8s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
         }
 
         &.fourth {
-            -webkit-animation: blueFourth 1s ease-out;
-            animation: spinner 1s ease-out;
+            -webkit-animation: blueFourth 8s;
+            animation: blueFourth 8s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
         }
-    }
-
-
-    
-
-    @-webkit-keyframes spinner {
-        0% {
-            -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-        }
-
-        25% {
-            -webkit-transform: rotate(-180deg);
-            transform: rotate(-180deg);
-        }
-
-        50% {
-            -webkit-transform: rotate(-270deg);
-            transform: rotate(-270deg);
-        }
-
-        100% {
-            -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-        }
-    }
-
-    @-webkit-keyframes blueFirst {
-        0% { color: $labBlue; }
-        25% { color: #fff; }
-        50% {}
-        100% {}
-    }
-
-    @-webkit-keyframes blueSecond {
-        0% { color: #fff; }
-        25% { color: $labBlue; }
-        50% { color: #fff; }
-        100% {}
-    }
-
-    @-webkit-keyframes blueThird {
-        0% {}
-        25% { color: #fff; }
-        50% { color: $labBlue; }
-        100% { color: #fff; }
-    }
-
-    @-webkit-keyframes blueFourth {
-        0% { color: #fff; }
-        25% { }
-        50% {  }
-        100% { color: $labBlue; }
     }
 }
