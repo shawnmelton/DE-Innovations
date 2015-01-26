@@ -56,7 +56,6 @@ $labBlue: #3be;
 
 #above-the-fold {
     background: url(../img/office-space.jpg) no-repeat center center;
-    position: relative;
 
     >nav, >p { position: absolute; }
 
@@ -164,7 +163,7 @@ $labBlue: #3be;
 
 
 #problems {
-    background: #273337;
+    background: url(../img/alt-green-bg.png) repeat 0 0;
     height: 618px;
     padding: 75px 0;
     color: #ddd;
@@ -174,6 +173,7 @@ $labBlue: #3be;
         margin-bottom: 50px;
         font-size: 275%;
         color: #ddd;
+        text-shadow: 0 0 5px #000;
     }
 
     >ul {
@@ -204,9 +204,162 @@ $labBlue: #3be;
                 margin-bottom: 25px;
                 text-align: center;
                 font-size: 115%;
+                min-height: 44px;
+                line-height: 22px;
+                text-shadow: 0 0 5px #000;
             }
 
-            >p { line-height: 22px; }
+            >p {
+                line-height: 22px;
+                text-shadow: 0 0 5px #000;
+            }
         }
+    }
+
+    >a.teaser {
+        color: #111;
+
+        >span.background {
+            background: #CBCCA8;
+            opacity: 0.7;
+        }
+
+        >span.text { text-shadow: none; }
+    }
+}
+
+#solutions {
+    background: url(../img/devices.jpg) no-repeat center center;
+
+    >div {
+        border-width: 10px;
+        border-style: solid;
+        border-radius: 250px;
+        height: 500px;
+        width: 500px;
+        position: absolute;
+        top: 84px;
+        left: 50%;
+        margin-left: -250px;
+
+        &.circle {
+            border-color: #fff;
+        }
+
+        &.partial {
+            border-color: transparent;
+            border-right-color: $labBlue;
+
+            -webkit-animation: spinner 1s ease-out;
+            animation: spinner 1s ease-out;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+    }
+
+    >p {
+        position: absolute;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        left: 50%;
+        top: 50%;
+        color: #fff;
+        font-size: 200%;
+        text-shadow: 0 0 10px #000;
+        text-transform: uppercase;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        &.second, &.third {
+            margin-left: -490px;
+        }
+
+        &.first, &.fourth {
+            margin-left: 220px;
+        }
+
+        &.second, &.first {
+            margin-top: -250px;
+        }
+
+        &.third, &.fourth {
+            margin-top: 100px;
+        }
+
+        &.first {
+            -webkit-animation: blueFirst 1s ease-out;
+            animation: spinner 1s ease-out;
+        }
+
+        &.second {
+            -webkit-animation: blueSecond 1s ease-out;
+            animation: spinner 1s ease-out;
+        }
+
+        &.third {
+            -webkit-animation: blueThird 1s ease-out;
+            animation: spinner 1s ease-out;
+        }
+
+        &.fourth {
+            -webkit-animation: blueFourth 1s ease-out;
+            animation: spinner 1s ease-out;
+        }
+    }
+
+
+    
+
+    @-webkit-keyframes spinner {
+        0% {
+            -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+        }
+
+        25% {
+            -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+        }
+
+        50% {
+            -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+    }
+
+    @-webkit-keyframes blueFirst {
+        0% { color: $labBlue; }
+        25% { color: #fff; }
+        50% {}
+        100% {}
+    }
+
+    @-webkit-keyframes blueSecond {
+        0% { color: #fff; }
+        25% { color: $labBlue; }
+        50% { color: #fff; }
+        100% {}
+    }
+
+    @-webkit-keyframes blueThird {
+        0% {}
+        25% { color: #fff; }
+        50% { color: $labBlue; }
+        100% { color: #fff; }
+    }
+
+    @-webkit-keyframes blueFourth {
+        0% { color: #fff; }
+        25% { }
+        50% {  }
+        100% { color: $labBlue; }
     }
 }
