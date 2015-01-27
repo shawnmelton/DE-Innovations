@@ -259,7 +259,7 @@ $labBlue: #3be;
 
     >p {
         position: absolute;
-        width: 260px;
+        width: 275px;
         height: 50px;
         line-height: 50px;
         text-align: center;
@@ -269,6 +269,8 @@ $labBlue: #3be;
         font-size: 225%;
         text-shadow: 0 0 1px #555;
         text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 1px;
 
         &.second, &.third {
             margin-left: -490px;
@@ -314,6 +316,43 @@ $labBlue: #3be;
             animation: blueFourth 8s;
             -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
+        }
+    }
+
+    >a.teaser {
+        color: #443418;
+
+        >span.background {
+            background: #ddd;
+            opacity: 0.6;
+        }
+
+        >span.text { text-shadow: none; }
+    }
+}
+
+#more-solutions {
+    height: auto;
+    padding: 100px 0;
+    position: relative;
+
+    div {
+        margin: 0 auto 110px;
+        width: 500px;
+
+        >img {
+            margin-bottom: 35px;
+            box-shadow: 0 0 5px #000;            
+        }
+
+        >h3 {
+            text-transform: uppercase;
+            font-size: 150%;
+            margin-bottom: 15px;
+        }
+
+        >p {
+            line-height: 22px;
         }
     }
 }
