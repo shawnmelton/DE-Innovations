@@ -1,8 +1,18 @@
 $labBlue: #3be;
 
+#devices {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 768px;
+}
+
 .sections {
     height: 768px;
     position: relative;
+    background: #fff;
 
     a.teaser {
         position: absolute;
@@ -229,7 +239,7 @@ $labBlue: #3be;
 }
 
 #solutions {
-    background: url(../img/devices.jpg) no-repeat center center;
+    background-color: transparent;
 
     >div {
         border-width: 10px;
@@ -257,7 +267,7 @@ $labBlue: #3be;
         }
     }
 
-    >p {
+    >a.stage {
         position: absolute;
         width: 275px;
         height: 50px;
@@ -271,22 +281,12 @@ $labBlue: #3be;
         text-transform: uppercase;
         font-weight: 400;
         letter-spacing: 1px;
+        text-decoration: none;
 
-        &.second, &.third {
-            margin-left: -490px;
-        }
-
-        &.first, &.fourth {
-            margin-left: 245px;
-        }
-
-        &.second, &.first {
-            margin-top: -250px;
-        }
-
-        &.third, &.fourth {
-            margin-top: 100px;
-        }
+        &.second, &.third { margin-left: -490px; }
+        &.first, &.fourth { margin-left: 245px; }
+        &.second, &.first { margin-top: -250px; }
+        &.third, &.fourth { margin-top: 100px; }
 
         &.first {
             color: $labBlue;
@@ -342,7 +342,10 @@ $labBlue: #3be;
 
         >img {
             margin-bottom: 35px;
-            box-shadow: 0 0 5px #000;            
+            box-shadow: 0 0 5px #000;
+            display: block;
+            min-height: 335px;
+            width: 500px;        
         }
 
         >h3 {

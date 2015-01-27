@@ -1,3 +1,4 @@
+<img id="devices" alt="/img/devices.jpg" class="lazyLoad">
 <div id="above-the-fold" class="sections">
     <p></p>
     <h1>
@@ -12,7 +13,7 @@
         <a onclick="scrollToEl('solutions');">Solutions</a>
         <a onclick="scrollToEl('more-solutions');">More Ideas</a>
     </nav>
-    <a class="clearfix teaser" onclick="window.scroll(0,768);">
+    <a class="clearfix teaser" onclick="scrollToEl('strengths');">
         <span class="background"></span>
         <span class="icon">&#xf01a;</span>
         <span class="text">
@@ -95,10 +96,10 @@
 <div id="solutions" class="sections">
     <div class="circle"></div>
     <div class="partial"></div>
-    <p class="first">Collaboration</p>
-    <p class="second">Creativity</p>
-    <p class="third">Celebration</p>
-    <p class="fourth">Culture</p>
+    <a class="first stage">Collaboration</a>
+    <a class="second stage">Creativity</a>
+    <a class="third stage">Celebration</a>
+    <a class="fourth stage">Culture</a>
     <a class="clearfix teaser" onclick="scrollToEl('more-solutions');">
         <span class="background"></span>
         <span class="icon">&#xf01a;</span>
@@ -110,30 +111,42 @@
 </div>
 <div id="more-solutions" class="sections">
     <div>
-        <img src="/img/marketing-site.jpg" alt="Innovation Reel">
+        <img alt="/img/marketing-site.jpg" class="lazyLoad">
         <h3>Innovation Reel</h3>
         <p>Adding an innovation reel on a marketing site that flaunts our innovation and creative space would bolster our recruiting efforts.  This beautiful web site would visually show candidates what recruiters and hiring managers have been attempting to convey orally.</p>
     </div>
     <div>
-        <img src="/img/whiteboard.jpg" alt="Idea Board">
+        <img alt="/img/whiteboard.jpg" class="lazyLoad">
         <h3>Idea Board</h3>
         <p>Adding an idea board would provide a location for employees to talk about the big challenges that our companies are trying to overcome.  Pulling in innovative, creative thinking during lunch breaks (or early mornings) would allow companies to benefit from thought leaders that are typically unavailable when companies work in their own siloes.</p>
     </div>
     <div>
-        <img src="/img/incubator.jpg" alt="Incubator">
+        <img alt="/img/incubator.jpg" class="lazyLoad">
         <h3>Incubator</h3>
         <p>Adding an incubator would allow Dominion Enterprises to foster excellent ideas and watch them grow into full-fledged solutions.  Hackathon winners could receive an additional week, two weeks or a month based on the merit of their efforts.  Companies would reap the rewards of seeing their employee's ideas become reality.</p>
     </div>
 </div>
 <script type="text/javascript">
-    var scrollToEl = function(elId) {
-        var elem = $('#'+ elId);
-        if(!(elem.offset())) {
-            return;
-        }
+    var onScrollEvent = function() {
+            if($('body').scrollTop() > 1500) {
+                $('.lazyLoad').each(function(el) {
+                    $(this).attr('src', $(this).attr('alt'));
+                });
 
-        $('body').animate({
-            scrollTop: elem.offset().top
-        }, elem.offset().top - $('body').scrollTop());
-    }
+                $(document).unbind('scroll', onScrollEvent);
+            }
+        },
+
+        scrollToEl = function(elId) {
+            var elem = $('#'+ elId);
+            if(!(elem.offset())) {
+                return;
+            }
+
+            $('body').animate({
+                scrollTop: elem.offset().top
+            }, elem.offset().top - $('body').scrollTop());
+        };
+
+    $(document).bind('scroll', onScrollEvent);
 </script>
