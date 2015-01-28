@@ -6,55 +6,130 @@ $labGreen: #4cee0c;
 @-webkit-keyframes spinner {
     0% {
         -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
         border-right-color: $labBlue;
     }
 
     25% {
         -webkit-transform: rotate(-135deg);
-        transform: rotate(-135deg);
         border-right-color: $labGreen;
     }
 
     50% {
         -webkit-transform: rotate(-225deg);
-        transform: rotate(-225deg);
         border-right-color: $labYellow;
     }
 
     75% {
         -webkit-transform: rotate(-315deg);
-        transform: rotate(-315deg);
         border-right-color: $labPink;
     }
 
     100% {
         -webkit-transform: rotate(-405deg);
-        transform: rotate(-405deg);
         border-right-color: $labBlue;
     }
 }
 
-@-webkit-keyframes blueFirst {
+@-webkit-keyframes circleFirst {
     0% { color: $labBlue; }
     25% { color: #fff; }
     75% { color: #fff; }
     100% { color: $labBlue; }
 }
 
-@-webkit-keyframes blueSecond {
+@-webkit-keyframes circleSecond {
     0% { color: #fff; }
     25% { color: $labGreen; }
     50% { color: #fff; }
 }
 
-@-webkit-keyframes blueThird {
+@-webkit-keyframes circleThird {
     25% { color: #fff; }
     50% { color: $labYellow; }
     75% { color: #fff; }
 }
 
-@-webkit-keyframes blueFourth {
+@-webkit-keyframes circleFourth {
+    50% { color: #fff; }
+    75% { color: $labPink; }
+    100% { color: #fff; }
+}
+
+@-webkit-keyframes textFirst {
+    0% { opacity: 1.0; }
+    10% { opacity: 0.0; }
+    85% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes textSecond {
+    10% { opacity: 0.0; }
+    25% { opacity: 1.0; }
+    35% { opacity: 0.0; }
+}
+
+@-webkit-keyframes textThird {
+    35% { opacity: 0.0; }
+    50% { opacity: 1.0; }
+    60% { opacity: 0.0; }
+}
+
+@-webkit-keyframes textFourth {
+    60% { opacity: 0.0; }
+    75% { opacity: 1.0; }
+    85% { opacity: 0.0; }
+}
+
+
+/* Non Webkit Browsers */
+
+@keyframes spinner {
+    0% {
+        transform: rotate(-45deg);
+        border-right-color: $labBlue;
+    }
+
+    25% {
+        transform: rotate(-135deg);
+        border-right-color: $labGreen;
+    }
+
+    50% {
+        transform: rotate(-225deg);
+        border-right-color: $labYellow;
+    }
+
+    75% {
+        transform: rotate(-315deg);
+        border-right-color: $labPink;
+    }
+
+    100% {
+        transform: rotate(-405deg);
+        border-right-color: $labBlue;
+    }
+}
+
+@keyframes circleFirst {
+    0% { color: $labBlue; }
+    25% { color: #fff; }
+    75% { color: #fff; }
+    100% { color: $labBlue; }
+}
+
+@keyframes circleSecond {
+    0% { color: #fff; }
+    25% { color: $labGreen; }
+    50% { color: #fff; }
+}
+
+@keyframes circleThird {
+    25% { color: #fff; }
+    50% { color: $labYellow; }
+    75% { color: #fff; }
+}
+
+@keyframes circleFourth {
     50% { color: #fff; }
     75% { color: $labPink; }
     100% { color: #fff; }

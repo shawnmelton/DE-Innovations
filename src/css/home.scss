@@ -241,16 +241,19 @@ $labBlue: #3be;
 #solutions {
     background-color: transparent;
 
+    >p, >div {
+        position: absolute;
+        top: 84px;
+        left: 50%;
+        margin-left: -250px;
+    }
+
     >div {
         border-width: 10px;
         border-style: solid;
         border-radius: 275px;
         height: 500px;
         width: 500px;
-        position: absolute;
-        top: 84px;
-        left: 50%;
-        margin-left: -250px;
 
         &.circle {
             border-color: #fff;
@@ -260,8 +263,8 @@ $labBlue: #3be;
             border-color: transparent;
             border-right-color: $labBlue;
 
-            -webkit-animation: spinner 8s;
-            animation: spinner 8s;
+            -webkit-animation: spinner 32s;
+            animation: spinner 32s;
             -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
         }
@@ -291,29 +294,26 @@ $labBlue: #3be;
         &.first {
             color: $labBlue;
 
-            -webkit-animation: blueFirst 8s;
-            animation: blueFirst 8s;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+            -webkit-animation: circleFirst 32s;
+            animation: circleFirst 32s;
         }
 
         &.second {
-            -webkit-animation: blueSecond 8s;
-            animation: blueSecond 8s;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+            -webkit-animation: circleSecond 32s;
+            animation: circleSecond 32s;
         }
 
         &.third {
-            -webkit-animation: blueThird 8s;
-            animation: blueThird 8s;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+            -webkit-animation: circleThird 32s;
+            animation: circleThird 32s;
         }
 
         &.fourth {
-            -webkit-animation: blueFourth 8s;
-            animation: blueFourth 8s;
+            -webkit-animation: circleFourth 32s;
+            animation: circleFourth 32s;
+        }
+
+        &.first, &.second, &.third, &.fourth {
             -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
         }
@@ -328,6 +328,43 @@ $labBlue: #3be;
         }
 
         >span.text { text-shadow: none; }
+    }
+
+    >p.text {
+        height: 300px;
+        width: 300px;
+        text-align: center;
+        padding: 100px;
+        color: #fff;
+        font-size: 175%;
+        text-shadow: 0 0 1px #555;
+        opacity: 0.0;
+        line-height: 40px;
+
+        &.first {
+            -webkit-animation: textFirst 32s;
+            animation: textFirst 32s;
+        }
+
+        &.second {
+            -webkit-animation: textSecond 32s;
+            animation: textSecond 32s;
+        }
+
+        &.third {
+            -webkit-animation: textThird 32s;
+            animation: textThird 32s;
+        }
+
+        &.fourth {
+            -webkit-animation: textFourth 32s;
+            animation: textFourth 32s;
+        }
+
+        &.first, &.second, &.third, &.fourth {
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
     }
 }
 
