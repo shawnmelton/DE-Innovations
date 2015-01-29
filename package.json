@@ -26,6 +26,7 @@
     "grunt-contrib-requirejs": "~0.4.4",
     "grunt-contrib-sass": "^0.8.1",
     "grunt-contrib-uglify": "~0.7.0",
-    "grunt-embed": "~0.2.1"
+    "grunt-embed": "~0.2.1",
+    "express": "^4.11.1"
   }
 }
