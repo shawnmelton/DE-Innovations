@@ -411,4 +411,12 @@ $labBlue: #3be;
             &:first-child { margin-right: 150px; }
         }
     }
+
+    >div:first-child{
+        font-size: 1.5em;
+
+        >div p{
+            line-height: 35px;
+        }
+    }
 }
