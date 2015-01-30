@@ -380,7 +380,11 @@ $labBlue: #3be;
         >div {
             float: left;
             margin-bottom: 110px;
-            width: 500px;
+            width: 500px;    
+
+            &.width100{
+                width: 100%;
+            }
 
             >img {
                 margin-bottom: 35px;
@@ -388,8 +392,12 @@ $labBlue: #3be;
                 display: block;
                 min-height: 335px;
                 width: 500px;        
+
+                &.width100{
+                    width: 100%;
+                }
             }
-            
+
             >h3 {
                 text-transform: uppercase;
                 font-size: 150%;
