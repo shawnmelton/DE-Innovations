@@ -380,7 +380,11 @@ $labBlue: #3be;
         >div {
             float: left;
             margin-bottom: 110px;
-            width: 500px;
+            width: 500px;    
+
+            &.width100{
+                width: 100%;
+            }
 
             >img {
                 margin-bottom: 35px;
@@ -388,6 +392,10 @@ $labBlue: #3be;
                 display: block;
                 min-height: 335px;
                 width: 500px;        
+
+                &.width100{
+                    width: 100%;
+                }
             }
 
             >h3 {
@@ -401,6 +409,14 @@ $labBlue: #3be;
             }
 
             &:first-child { margin-right: 150px; }
+        }
+    }
+
+    >div:first-child{
+        font-size: 1.5em;
+
+        >div p{
+            line-height: 35px;
         }
     }
 }
